@@ -157,4 +157,4 @@ def summary(request, pk):
 
     return render(request, 'crm/summary.html', {'customer': customer, 'products': products,
                                                 'services': services, 'sum_service_charge': sum_service_charge,
-                                                'sum_product_charge': sum_product_charge, })\
+                                                'sum_product_charge': sum_product_charge, })
