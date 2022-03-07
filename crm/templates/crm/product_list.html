@@ -43,7 +43,7 @@
                     <td>{{ product.p_description }}</td>
                     <td>{{ product.quantity }}</td>
                     <td>{{ product.pickup_time }}</td>
-                    <td>{{ product.charge }}</td>
+                    <td>{{ product.charge|floatformat:2|intcomma }}</td>
                     <td><a href=="{% url 'crm:product_edit' pk=product.pk %}"
                            class="btn btn-warning">Edit</a></td>
                     <td><a href="{% url 'crm:product_delete' pk=product.pk %}"
