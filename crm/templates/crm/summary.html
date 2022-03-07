@@ -43,7 +43,7 @@
                     <td>{{ service.location }}</td>
                     <td>{{ service.setup_time }}</td>
                     <td>{{ service.cleanup_time }}</td>
-                    <td>{{ service.service_charge|intcomma }}</td>
+                    <td>{{ service.service_charge|floatformat:2|intcomma }}</td>
                 </tr>
             {% endfor %}
             </tbody>
@@ -57,7 +57,7 @@
         </thead>
         <tbody>
             <tr>
-                <td>{{ sum_service_charge.charge__sum|intcomma }}</td>
+                <td>{{ sum_service_charge.charge__sum|floatformat:2|intcomma }}</td>
 
             </tr>
         </tbody>
@@ -85,7 +85,7 @@
                     <td>{{ product.p_description }}</td>
                     <td>{{ product.quantity|intcomma }}</td>
                     <td>{{ product.pickup_time }}</td>
-                    <td>{{ product.charge|intcomma }}</td>
+                    <td>{{ product.charge|floatformat:2|intcomma }}</td>
                 </tr>
             {% endfor %}
             </tbody>
